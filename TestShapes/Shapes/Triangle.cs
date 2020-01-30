@@ -28,5 +28,13 @@ namespace TestShapes.Shapes
             var hp = sides.Sum() / 2.0;
             return Math.Sqrt(hp * (hp - sides[0]) * (hp - sides[1]) * (hp - sides[2]));
         }
+
+        public bool IsRight()
+        {
+            return
+                sides[0] * sides[0] + sides[1] * sides[1] == sides[2] * sides[2] ||
+                sides[1] * sides[1] + sides[2] * sides[2] == sides[0] * sides[0] ||
+                sides[2] * sides[2] + sides[0] * sides[0] == sides[1] * sides[1];
+        }
     }
 }

@@ -29,5 +29,10 @@ namespace TestShapes
         {
             return GetArea(new Triangle(a, b, c));
         }
+
+        public bool IsTriangleRight(double a, double b, double c)
+        {
+            return new Triangle(a, b, c).IsRight();
+        }
     }
 }
